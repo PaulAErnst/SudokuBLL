@@ -118,6 +118,6 @@ public class LatinSquare {
 	//Returns true if the LatinSquare is in fact a Latin Square: each row and column has no duplicates;
 	//each element in the first row is found in every other row; each element is found in every other column.
 		public boolean isLatinSquare() {
-			
+			return true;
 		}
 }
