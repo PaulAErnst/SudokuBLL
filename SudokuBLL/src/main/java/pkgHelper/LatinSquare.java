@@ -54,6 +54,9 @@ public class LatinSquare {
 		
 	//Returns true if the square contains any number of zeroes.
 		public boolean ContainsZero(int[][] arr) {
+			if (arr == null) {
+				return false;
+			}
 			
 			for (int iCol = 0; iCol < arr.length; iCol++) {
 				for (int iRow = 0; iRow < arr.length; iRow++) {
@@ -67,6 +70,9 @@ public class LatinSquare {
 	
 	//Returns true if the array contains the value in question.
 		public boolean doesElementExist(int[] arr, int iValue) {
+			if (arr == null) {
+				return false;
+			}
 			
 			for (int i = 0; i < arr.length; i++) {
 				if (arr[i] == iValue) {
@@ -85,6 +91,7 @@ public class LatinSquare {
 			}
 			
 			Arrays.sort(arr);
+		
 			
 			for (int i = 0; i < arr.length-1; i++) {
 				if (arr[i] == arr[i + 1]) {
@@ -98,6 +105,9 @@ public class LatinSquare {
 	
 	//Returns true if all of the values in the first array are found in the second array.
 		public boolean hasAllValues(int[] arr1, int[] arr2) {
+			if (arr1 == null || arr2 == null) {
+				return false;
+			}
 			
 			int valuesPresentCounter = 0;
 			for (int arr2Count = 0; arr2Count < arr2.length; arr2Count++) {
@@ -136,13 +146,12 @@ public class LatinSquare {
 				}
 			}
 			for (int i = 0; i < latinLength; i++) {
-				if (!this.hasDuplicates(this.getColumn(i))) {
+				if (this.hasDuplicates(this.getColumn(i))) {
 					return false;
 				}
 			}
-			
 			for (int i = 0; i < latinLength; i++) {
-				if (!this.hasDuplicates(this.getRow(i))) {
+				if (this.hasDuplicates(this.getRow(i))) {
 					return false;
 				}
 			}
