@@ -116,8 +116,36 @@ public class LatinSquare {
 		
 
 	//Returns true if the LatinSquare is in fact a Latin Square: each row and column has no duplicates;
-	//each element in the first row is found in every other row; each element is found in every other column.
+	//each element in the first row is found in every other row; each element in the first column 
+	//is found in every other column.
 		public boolean isLatinSquare() {
+			int [][] latin = this.LatinSquare;
+			int latinLength = this.LatinSquare.length;
+			for (int i = 0; i < latinLength; i++) {
+				for (int j = 0; j < latinLength; j++) {
+					if (!this.doesElementExist(this.getRow(j), latin[0][i])) {
+						return false;
+					}
+				}
+			}
+			for (int i = 0; i < latinLength; i++) {
+				for (int j = 0; j < latinLength; j++) {
+					if (!this.doesElementExist(this.getColumn(j), latin[i][0])) {
+						return false;
+					}
+				}
+			}
+			for (int i = 0; i < latinLength; i++) {
+				if (!this.hasDuplicates(this.getColumn(i))) {
+					return false;
+				}
+			}
+			
+			for (int i = 0; i < latinLength; i++) {
+				if (!this.hasDuplicates(this.getRow(i))) {
+					return false;
+				}
+			}
 			return true;
 		}
 }
