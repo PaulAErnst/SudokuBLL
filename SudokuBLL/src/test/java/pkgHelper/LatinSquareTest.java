@@ -51,10 +51,6 @@ public class LatinSquareTest {
 		assertTrue(ls.getColumn(1) == myColumn2);
 		assertTrue(ls.getColumn(2) == myColumn3);
 		
-
-		System.out.println(Arrays.toString(ls.getColumn(1)));
-		System.out.println(Arrays.toString(ls.getColumn(0)));
-		
 		
 	}
 	@Test
