@@ -35,7 +35,7 @@ public class LatinSquare {
 		public int[] getColumn(int colNumber) {
 			
 			int[] colReturn = new int[LatinSquare.length];
-			for (int iColumn = 0; iColumn < LatinSquare.length ; iColumn++) {
+			for (int iColumn = 0; iColumn < LatinSquare.length; iColumn++) {
 				colReturn[iColumn] = LatinSquare[iColumn][colNumber];
 			}
 			return colReturn;
@@ -45,7 +45,7 @@ public class LatinSquare {
 		public int[] getRow(int rowNumber) {
 			
 			int[] rowReturn = new int[LatinSquare.length];
-			for (int iRow = 0; iRow < LatinSquare.length ; iRow++) {
+			for (int iRow = 0; iRow < LatinSquare.length; iRow++) {
 				rowReturn[iRow] = LatinSquare[rowNumber][iRow];
 			}
 			return rowReturn;
