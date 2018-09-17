@@ -9,7 +9,7 @@ public class BaseBallStatsCalculator {
 	private double doubles;
 	private double triples;
 	private double homeRuns;
-	private double runs; //This is not used in any of the calculations (cross checked with the given Babe Ruth stats)
+	private double runs; //This is not used in any of the derived calculations (cross checked with the given Babe Ruth stats)
 	private double walks;
 	
 	public static void main(String[] args) {
